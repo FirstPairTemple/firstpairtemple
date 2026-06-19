@@ -4,65 +4,255 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>First Pair Temple — 美国直邮代购</title>
+  <meta name="description" content="一个住在美国俄亥俄州的美国人，帮中国朋友直邮美国本土商品。透明定价，全程拍照，真实货源。">
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      background: #f5f1ea;
+      color: #2a2520;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
       max-width: 680px;
       margin: 0 auto;
-      padding: 40px 20px;
-      line-height: 1.6;
-      color: #1a1a1a;
-      background: #fafafa;
+      padding: 60px 24px;
     }
-    h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
+
+    header {
+      text-align: center;
+      padding: 40px 0 60px;
+      border-bottom: 1px solid #d9d0c2;
+      margin-bottom: 60px;
     }
-    .tagline {
-      color: #666;
-      font-size: 18px;
-      margin-bottom: 40px;
-    }
-    h2 {
-      font-size: 22px;
-      margin-top: 40px;
-    }
-    .cta {
-      display: inline-block;
-      background: #1a1a1a;
-      color: white;
-      padding: 14px 28px;
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 20px;
-    }
-    footer {
-      margin-top: 60px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      color: #999;
+
+    .logo {
       font-size: 14px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #8a7a65;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .tagline {
+      font-size: 18px;
+      color: #6b6055;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 56px;
+    }
+
+    h2 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    h2 .en {
+      font-size: 15px;
+      color: #8a7a65;
+      font-weight: 400;
+      margin-left: 8px;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 16.5px;
+      color: #3a322a;
+    }
+
+    .highlight {
+      background: #fff7e6;
+      border-left: 3px solid #d4a847;
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-radius: 4px;
+    }
+
+    .highlight p { margin-bottom: 0; }
+
+    ol.steps {
+      list-style: none;
+      counter-reset: step;
+      padding: 0;
+    }
+
+    ol.steps li {
+      counter-increment: step;
+      padding: 18px 0 18px 56px;
+      position: relative;
+      border-bottom: 1px solid #e8dfd1;
+      font-size: 16.5px;
+    }
+
+    ol.steps li:last-child { border-bottom: none; }
+
+    ol.steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 18px;
+      width: 36px;
+      height: 36px;
+      background: #2a2520;
+      color: #f5f1ea;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .step-en {
+      display: block;
+      color: #8a7a65;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .cta-section {
+      background: #2a2520;
+      color: #f5f1ea;
+      padding: 48px 32px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 60px 0;
+    }
+
+    .cta-section h2 { color: #f5f1ea; }
+    .cta-section h2 .en { color: #a89888; }
+    .cta-section p { color: #d9d0c2; }
+
+    .form-section {
+      background: #fff;
+      padding: 40px 32px;
+      border-radius: 8px;
+      margin: 40px 0;
+      border: 1px solid #e8dfd1;
+    }
+
+    .contact-alt {
+      text-align: center;
+      padding: 32px 0;
+      color: #6b6055;
+      font-size: 15px;
+    }
+
+    .contact-alt a {
+      color: #2a2520;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 48px 0 24px;
+      border-top: 1px solid #d9d0c2;
+      margin-top: 60px;
+      color: #8a7a65;
+      font-size: 14px;
+    }
+
+    footer p { color: #8a7a65; font-size: 14px; }
+
+    @media (max-width: 600px) {
+      .container { padding: 40px 20px; }
+      h1 { font-size: 32px; }
+      h2 { font-size: 22px; }
+      .form-section { padding: 24px 16px; }
+      .cta-section { padding: 32px 20px; }
     }
   </style>
 </head>
 <body>
-  <h1>First Pair Temple</h1>
-  <p class="tagline">从美国直邮的真实商品 · Real American goods, shipped to China</p>
+  <div class="container">
 
-  <h2>关于我们 / About</h2>
-  <p>我是一名美国人，帮助中国朋友购买美国本土商品并直邮回国。透明定价，真实货源，全程拍照确认。</p>
-  <p>I'm an American helping Chinese friends buy U.S. goods and ship them home. Transparent pricing, real sourcing, photo verification at every step.</p>
+    <header>
+      <div class="logo">First Pair Temple</div>
+      <h1>从美国，直邮给你</h1>
+      <p class="tagline">Real American goods, sourced and shipped by a real American.</p>
+    </header>
 
-  <h2>流程 / How It Works</h2>
-  <p>1. 发送商品链接 / Send a product link<br>
-     2. 我报价并采购 / I quote and source<br>
-     3. 拍照确认 / Photo confirmation<br>
-     4. 直邮回国 / Direct shipping to China</p>
+    <section>
+      <h2>关于我 <span class="en">/ About</span></h2>
+      <p>嗨，我是 Justin，住在美国俄亥俄州。两年前我拍了一个小视频，带中国朋友看看我们美国的学校。那时候我就觉得，中国朋友对美国本土的东西其实很好奇——但很多商品在国内买不到、太贵、或者要绕很多弯路。</p>
+      <p>所以我开始帮人代购。从 Amazon、eBay、Nike USA、Urban Outfitters 这些网站，到 outlet、vintage 店、本地小店——我可以帮你买，并直接邮回国。</p>
+      <div class="highlight">
+        <p><strong>透明定价 · 全程拍照 · 真实货源 · 我亲自处理每一单</strong></p>
+      </div>
+    </section>
 
-  <a href="mailto:hello@firstpairtemple.com" class="cta">联系我 / Contact</a>
+    <section>
+      <h2>怎么操作 <span class="en">/ How it works</span></h2>
+      <ol class="steps">
+        <li>
+          你发我商品链接和需求
+          <span class="step-en">Send me a product link and your details</span>
+        </li>
+        <li>
+          我给你报价（含商品、税、运费、服务费）
+          <span class="step-en">I quote you the all-in landed price</span>
+        </li>
+        <li>
+          确认后我去美国本地下单
+          <span class="step-en">After you confirm, I order from the U.S. retailer</span>
+        </li>
+        <li>
+          商品到我手上后，拍照给你确认
+          <span class="step-en">When it arrives, I send you photos for approval</span>
+        </li>
+        <li>
+          打包、直邮回国
+          <span class="step-en">Pack and ship directly to China</span>
+        </li>
+      </ol>
+    </section>
 
-  <footer>
-    First Pair Temple · Boardman, Ohio, USA
-  </footer>
+    <section>
+      <h2>我可以买什么 <span class="en">/ What I can source</span></h2>
+      <p>美国本土的服装、鞋子、配饰、二手 vintage、运动用品、大学校园周边、工装、街头服饰、outlet 商品。简单说：你看到的、想要的美国商品，大部分我都能帮你买。</p>
+      <p style="color: #8a7a65; font-size: 15px;">Apparel, footwear, accessories, vintage, sportswear, college merch, workwear, streetwear, outlet finds. If you've seen it on a U.S. site, I can probably get it.</p>
+    </section>
+
+    <div class="cta-section">
+      <h2>提交代购请求 <span class="en">/ Submit a request</span></h2>
+      <p>填写下面的表格，我会尽快给你回复报价。</p>
+      <p style="margin-top: 8px;">Fill out the form below and I'll get back to you with a quote.</p>
+    </div>
+
+    <div class="form-section">
+      <iframe data-tally-src="https://tally.so/embed/Bz6p5N?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="990" frameborder="0" marginheight="0" marginwidth="0" title="代购请求 / Product Request"></iframe>
+      <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+    </div>
+
+    <div class="contact-alt">
+      <p>也可以直接邮件联系我：<a href="mailto:hello@firstpairtemple.com">hello@firstpairtemple.com</a></p>
+    </div>
+
+    <footer>
+      <p>First Pair Temple · Boardman, Ohio, USA</p>
+      <p style="margin-top: 8px;">© 2026</p>
+    </footer>
+
+  </div>
 </body>
 </html>
